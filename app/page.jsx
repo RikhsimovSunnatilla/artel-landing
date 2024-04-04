@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { DrawSVGPlugin } from "gsap/all";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Flag, LikeShapes } from "iconsax-react";
 import Image from "next/image";
 import { register } from "swiper/element/bundle";
 
@@ -42,11 +43,11 @@ export default function Home() {
     () => {
       gsap.from(".image", {
         scale: 31,
-        duration: 8,
+        duration: 5,
         scrollTrigger: {
           trigger: "#zoom-out",
           pin: true,
-          scrub: 1,
+          scrub: true,
         },
       });
 
@@ -76,8 +77,8 @@ export default function Home() {
   );
 
   return (
-    <main>
-      {/* <div
+    <main className="to-primary-light-2 bg-gradient-to-r from-primary-dark">
+      <div
         id="zoom-out"
         className="-z-[1] h-full min-h-screen overflow-hidden bg-[url('/images/home-bg.jpeg')] bg-cover bg-no-repeat"
       >
@@ -86,7 +87,7 @@ export default function Home() {
           alt=""
           className="image h-full max-h-screen scale-100 object-cover"
         />
-      </div> */}
+      </div>
 
       <div className="line relative">
         <BrandsLine className="absolute left-0 right-0 top-[110px] z-[-1] w-full" />
@@ -165,12 +166,176 @@ export default function Home() {
         {/* <hr className="mb-[150px] mt-[30px]" /> */}
       </div>
 
-      <p className="mt-40">
-        Ключевая особенность бренда Artel является мультикатегорийность с более
-        16 категорий включая решения бытовой техники для кухни, гостинной и
-        уборки, что позволит полностью укомплектовать Ваш дом современной
-        техникой.
-      </p>
+      <div className="container">
+        <div className="flex space-x-5 pb-[60px] pt-[120px]">
+          <div className="h-[160px] w-[236px] flex-shrink-0 rounded-xl bg-white bg-opacity-15 px-6 py-[34px] text-background">
+            <div className="mb-3 text-sm font-bold">На рынке</div>
+            <h2 className="text-5xl font-bold leading-[58px]">
+              13<span className="text-2xl">лет</span>
+            </h2>
+          </div>
+          <div className="h-[160px] w-[236px] flex-shrink-0 rounded-xl bg-white bg-opacity-15 px-6 py-[34px] text-background">
+            <div className="mb-3 text-sm font-bold">Товарные категории</div>
+            <h2 className="text-5xl font-bold leading-[58px]">22</h2>
+          </div>
+          <div className="h-[160px] w-[236px] flex-shrink-0 rounded-xl bg-white bg-opacity-15 px-6 py-[34px] text-background">
+            <div className="mb-3 text-sm font-bold">Количество SKU</div>
+            <h2 className="text-5xl font-bold leading-[58px]">840</h2>
+          </div>
+          <div className="h-[160px] w-[236px] flex-shrink-0 rounded-xl bg-white bg-opacity-15 px-6 py-[34px] text-background">
+            <div className="mb-3 text-sm font-bold">Количество заводов</div>
+            <h2 className="text-5xl font-bold leading-[58px]">15</h2>
+          </div>
+          <div className="h-[160px] w-[236px] flex-shrink-0 rounded-xl bg-white bg-opacity-15 px-6 py-[34px] text-background">
+            <div className="mb-3 text-sm font-bold">На рынке</div>
+            <h2 className="text-5xl font-bold leading-[58px]">
+              13<span className="text-2xl">лет</span>
+            </h2>
+          </div>
+          <div className="flex h-[160px] w-[236px] flex-shrink-0 flex-col justify-center rounded-xl bg-white bg-opacity-15 px-6 text-background">
+            <div className="mb-3 text-sm font-bold">
+              Общая площадь логистического хаба
+            </div>
+            <h2 className="whitespace-nowrap text-5xl font-bold leading-[58px]">
+              400<span className="text-2xl">кв.м</span>
+            </h2>
+          </div>
+        </div>
+
+        <div className="py-[60px]">
+          <div className="mb-11">
+            <h1 className="mb-6 text-5xl font-bold leading-[58px] text-background">
+              Наша Миссия
+            </h1>
+            <p className="max-w-[490px] border-l-[3px] border-background pl-5 text-xl text-background">
+              Создавать надёжную и выгодную бытовую технику для каждого дома
+            </p>
+          </div>
+          <div className="flex space-x-11">
+            <div className="w-[965px] flex-shrink-0">
+              <Image
+                src="/images/mission/opennes.png"
+                width={965}
+                height={620}
+                alt="Partners signing the contract"
+                className="mb-[30px] rounded-2xl object-cover"
+              />
+              <div className="mb-5 flex items-center space-x-5 text-white">
+                <div className="flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-xl bg-[#ECFCE81A]">
+                  <LikeShapes variant="Bold" size={48} />
+                </div>
+                <h2 className="text-[40px] font-bold">Открытость</h2>
+              </div>
+              <p className="text-2xl text-background">
+                Мы открыты к взаимовыгодному сотрудничеству и партнерству. Наши
+                бизнес-процессы открыты для клиентов и партнеров. Мы
+                обеспечиваем финансовую транспарентность в нашей работе.
+              </p>
+            </div>
+            <div className="w-[965px] flex-shrink-0">
+              <Image
+                src="/images/mission/opennes.png"
+                width={965}
+                height={620}
+                alt="Partners signing the contract"
+                className="mb-[30px] rounded-2xl object-cover"
+              />
+              <div className="mb-5 flex items-center space-x-5 text-white">
+                <div className="flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-xl bg-[#ECFCE81A]">
+                  <LikeShapes variant="Bold" size={48} />
+                </div>
+                <h2 className="text-[40px] font-bold">Открытость</h2>
+              </div>
+              <p className="text-2xl text-background">
+                Мы открыты к взаимовыгодному сотрудничеству и партнерству. Наши
+                бизнес-процессы открыты для клиентов и партнеров. Мы
+                обеспечиваем финансовую транспарентность в нашей работе.
+              </p>
+            </div>
+            <div className="w-[965px] flex-shrink-0">
+              <Image
+                src="/images/mission/opennes.png"
+                width={965}
+                height={620}
+                alt="Partners signing the contract"
+                className="mb-[30px] rounded-2xl object-cover"
+              />
+              <div className="mb-5 flex items-center space-x-5 text-white">
+                <div className="flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-xl bg-[#ECFCE81A]">
+                  <LikeShapes variant="Bold" size={48} />
+                </div>
+                <h2 className="text-[40px] font-bold">Открытость</h2>
+              </div>
+              <p className="text-2xl text-background">
+                Мы открыты к взаимовыгодному сотрудничеству и партнерству. Наши
+                бизнес-процессы открыты для клиентов и партнеров. Мы
+                обеспечиваем финансовую транспарентность в нашей работе.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="py-[60px]">
+          <div className="mb-11">
+            <h1 className="mb-5 text-[40px] font-bold text-background">
+              Наша История
+            </h1>
+            <p className="max-w-[365px] text-xl text-background">
+              Предприятие «Артель» имеет многолетнюю историю.
+            </p>
+          </div>
+          <div className="relative flex space-x-11 after:absolute after:bottom-[16px] after:w-full after:border-b after:border-dashed after:border-white after:border-opacity-20 after:content-['']">
+            <div className="flex-shrink-0">
+              <div className="flex space-x-5 text-white">
+                <div className="w-[400px] rounded-2xl border border-white border-opacity-10 bg-white bg-opacity-5 p-[30px]">
+                  <div className="mb-5 inline-flex rounded-md border border-white border-opacity-20 px-6 py-1.5 text-xl font-medium text-background">
+                    2011
+                  </div>
+                  <h5 className="mb-3 text-2xl font-bold">Мы начали здесь</h5>
+                  <p className="text-lg">
+                    Компания Artel начинает свою деятельность с производства
+                    газовых плит и пылесосов в городе Ташкенте. В этом же году
+                    Artel подписывает партнерское соглашение с Samsung.
+                  </p>
+                </div>
+                <Image
+                  src="/images/history/2011.png"
+                  width={600}
+                  height={380}
+                  alt="Gas plates"
+                  className="rounded-[20px] object-cover"
+                />
+              </div>
+              <div className="relative z-[1] mt-10 flex h-9 w-9 items-center justify-center rounded-xl border-2 border-primary-dark bg-background text-primary-dark shadow-[0_0_0_3px_rgba(255,255,255,0.5)]">
+                <Flag variant="Bold" size={24} />
+              </div>
+            </div>
+            <div className="flex-shrink-0">
+              <div className="flex space-x-5 text-white">
+                <div className="w-[400px] rounded-2xl border border-white border-opacity-10 bg-white bg-opacity-5 p-[30px]">
+                  <div className="mb-5 inline-flex rounded-md border border-white border-opacity-20 px-6 py-1.5 text-xl font-medium text-background">
+                    2011
+                  </div>
+                  <h5 className="mb-3 text-2xl font-bold">Мы начали здесь</h5>
+                  <p className="text-lg">
+                    Компания Artel начинает свою деятельность с производства
+                    газовых плит и пылесосов в городе Ташкенте. В этом же году
+                    Artel подписывает партнерское соглашение с Samsung.
+                  </p>
+                </div>
+                <Image
+                  src="/images/history/2011.png"
+                  width={600}
+                  height={380}
+                  alt="Gas plates"
+                  className="rounded-[20px] object-cover"
+                />
+              </div>
+              <div className="relative z-[1] mt-10 flex h-9 w-9 items-center justify-center rounded-xl border-2 border-[#029A4A] bg-[#35AD6E] text-primary-dark shadow-[0_0_0_3px_rgba(255,255,255,0.2)]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

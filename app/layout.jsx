@@ -42,7 +42,6 @@ export default function RootLayout({ children }) {
       <body className={cn("min-h-screen bg-background", customFont.className)}>
         <Navbar />
         <div className="-mt-[136px]">{children}</div>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.min.js"></script>
       </body>
     </html>
   );
