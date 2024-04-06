@@ -166,6 +166,7 @@ export default function Home() {
         {/* <hr className="mb-[150px] mt-[30px]" /> */}
       </div>
 
+      <div className="to-primary-light-2 bg-gradient-to-r from-primary-dark">
       <div className="container">
         <div className="flex space-x-5 pb-[60px] pt-[120px]">
           <div className="h-[160px] w-[236px] flex-shrink-0 rounded-xl bg-white bg-opacity-15 px-6 py-[34px] text-background">
@@ -335,6 +336,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </main>
   );
