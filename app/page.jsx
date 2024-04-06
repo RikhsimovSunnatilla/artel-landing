@@ -77,7 +77,7 @@ export default function Home() {
   );
 
   return (
-    <main className="to-primary-light-2 bg-gradient-to-r from-primary-dark">
+    <main className="">
       <div
         id="zoom-out"
         className="-z-[1] h-full min-h-screen overflow-hidden bg-[url('/images/home-bg.jpeg')] bg-cover bg-no-repeat"
