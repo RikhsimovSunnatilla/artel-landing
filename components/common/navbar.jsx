@@ -3,10 +3,14 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ChevronDown, ChevronRight, Globe, Menu, Phone } from "lucide-react";
 import Image from "next/image";
 
 import { Button } from "../ui/button";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   const navbarRef = useRef(null);

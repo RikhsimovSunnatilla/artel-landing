@@ -3,12 +3,18 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { register } from "swiper/element/bundle";
 
 import Brand from "./brand";
 import Hero from "./hero";
 import History from "./history";
 import Mission from "./mission";
 import Stats from "./stats";
+
+register();
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const containerRef = useRef(null);
