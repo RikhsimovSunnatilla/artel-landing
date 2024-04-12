@@ -19,7 +19,7 @@ const HistoryItem = ({
         className,
       )}
     >
-      <div className="flex space-x-5 text-white">
+      <div className="flex min-h-[380px] space-x-5 text-white">
         <div className="w-[400px] rounded-2xl border border-white border-opacity-10 bg-[#109D53] p-[30px]">
           <div className="mb-5 inline-flex rounded-md border border-white border-opacity-20 px-6 py-1.5 text-xl font-medium text-background">
             {year}
