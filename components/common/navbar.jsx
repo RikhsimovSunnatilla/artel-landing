@@ -1,15 +1,10 @@
 "use client";
 
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
-
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
-
-import { useRef } from "react";
 import { ChevronDown, ChevronRight, Globe, Menu, Phone } from "lucide-react";
+import Image from "next/image";
 
 import { Button } from "../ui/button";
 
